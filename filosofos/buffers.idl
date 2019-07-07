@@ -1,0 +1,18 @@
+module BuffersCorba
+{
+  typedef long longArray[5];
+  typedef boolean boolArray[5];
+  interface Buffers
+  {
+    boolean getGarfo(in long garfo);
+    void setGarfo(in long garfo, in boolean valor);
+    long getTentativa(in long filosofo);
+    void addTentativa(in long filosofo);
+    void setTentativa(in long filosofo, in long valor);
+    long getSituacao(in long filosofo);
+    void setSituacao(in long filosofo, in long valor);
+    boolArray getGarfos();
+    longArray getFilosofos();
+    longArray getTentativas();
+  };
+};
