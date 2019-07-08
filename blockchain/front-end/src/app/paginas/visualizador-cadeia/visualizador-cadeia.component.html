@@ -1,0 +1,20 @@
+<div class="container">
+  <h1>Blocos da cadeia</h1>
+  <p>
+    Cada retângulo representa um bloco. Clique em um bloco para visualizar
+    suas transações.
+  </p>
+  <app-visualizador-bloco *ngFor="let bloco of blocos"
+  (click)="exibirTransacoes(bloco)" [bloco]="bloco">
+
+  </app-visualizador-bloco>
+</div>
+
+<br><br>
+
+<div class="container">
+  <h1>Transações do Bloco</h1>
+  <app-tabela-transacoes [transacoes]="blocoSelecionado.transacoes">
+
+  </app-tabela-transacoes>
+</div>
